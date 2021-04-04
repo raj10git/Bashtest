@@ -1,0 +1,26 @@
+How to approach DP problems
+
+There is some frustration when people publish their perfect fine-grained algorithms without sharing any information abut how they were derived. This is an attempt to change the situation. There is not much more explanation but it's rather an example of higher level improvements. Converting a solution to the next step shouldn't be as hard as attempting to come up with perfect algorithm at first attempt.
+
+This particular problem and most of others can be approached using the following sequence:
+
+-Find recursive relation
+-Recursive (top-down)
+-Recursive + memo (top-down)
+-Iterative + memo (bottom-up)
+-Iterative + N variables (bottom-up)
+	Step 1. Figure out recursive relation.
+A robber has 2 options: a) rob current house i; b) don't rob current house.
+If an option "a" is selected it means she can't rob previous i-1 house but can safely proceed to the one before previous i-2 and gets all cumulative loot that follows.
+If an option "b" is selected the robber gets all the possible loot from robbery of i-1 and all the following buildings.
+So it boils down to calculating what is more profitable:
+
+-robbery of current house + loot from houses before the previous
+-loot from the previous house robbery and any loot captured before that
+
+	Step 2. Recursive (top-down)
+Converting the recurrent relation from Step 1 shound't be very hard.
+
+
+
+https://leetcode.com/problems/target-sum/discuss/455024/DP-IS-EASY!-5-Steps-to-Think-Through-DP-Questions.
